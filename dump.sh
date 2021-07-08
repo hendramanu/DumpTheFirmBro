@@ -7,6 +7,7 @@ git clone https://github.com/DroidDumps/phoenix_firmware_dumper fwdump && cd fwd
 
 # Set up required variable
 echo ${GH_PAT} > .github_token
+echo "HendraFirmDump" > .github_orgname
 
 # Set up environment
 ./setup.sh
