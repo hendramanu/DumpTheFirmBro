@@ -10,7 +10,7 @@ echo ${GH_PAT} > .github_token
 echo "HendraFirmDump" > .github_orgname
 
 # Set up environment
-./setup.sh
+sudo ./setup.sh
 
 # Dump
 ./dumper.sh ${FW_URL}
