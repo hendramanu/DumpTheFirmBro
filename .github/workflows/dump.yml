@@ -1,0 +1,25 @@
+name: DumpTheFirmBro
+
+on:
+  workflow_dispatch:
+
+    inputs:
+      FW_URL:
+        description: "Firmware URL"
+        required: true
+
+jobs:
+  dump:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Dumping
+        env:
+          FW_URL: ${{ github.event.inputs.FW_URL }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+
+        run: ./dump.sh
